@@ -27,6 +27,7 @@
     "use-input-property-decorator": true,
     "use-life-cycle-interface": true,
     "use-output-property-decorator": true,
+    "no-trailing-whitespace": false,
     "use-pipe-transform-interface": true,
     // General
     "no-console": [true,
@@ -53,6 +54,11 @@
       "allow-pascal-case",
       "ban-keywords",
       "check-format"
-    ]
+    ],
+    "whitespace": [
+      true
+    ],
+    "eofline": false
+
   }
 }
