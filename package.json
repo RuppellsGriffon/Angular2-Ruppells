@@ -8,7 +8,7 @@
     "start": "npm run server:dev",
     "tslint": "tslint",
     "lint": "npm run tslint \"src/**/*.ts\"",
-    "test": "npm run lint"
+    "test": "npm run lint && karma start"
   },
   "dependencies": {
     "@angular/common": "2.4.6",
