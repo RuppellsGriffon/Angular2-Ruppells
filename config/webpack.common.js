@@ -26,7 +26,7 @@ const ngcWebpack = require('ngc-webpack');
  */
 const AOT = helpers.hasNpmFlag('aot');
 const METADATA = {
-  title: 'Angular2 Webpack Starter by @gdi2290 from @AngularClass',
+  title: 'Studying angular 2 with Tour of Heroes provided by Google',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };
