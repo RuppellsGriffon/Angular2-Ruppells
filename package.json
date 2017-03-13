@@ -10,17 +10,22 @@
     "lint": "npm run tslint \"src/**/*.ts\"",
     "test": "npm run lint && karma start",
 
+    "ci:travis": "npm run test && npm run build:aot && npm run e2e:travis",
+    "e2e:travis": "npm-run-all -p -r server:prod:ci protractor:delay",
+
     "ci:testall": "npm run test && npm run build:prod && npm run e2e && npm run build:aot && npm run e2e",
     "ci": "npm run ci:testall",
     "e2e": "npm-run-all -p -r server:prod:ci protractor",
     "build:aot": "npm run build:aot:prod",
     "server:prod:ci": "http-server dist -p 3000 -c-1 --cors",
     "protractor": "protractor",
+    "protractor:delay": "sleep 3 && npm run protractor",
     "build:prod": "npm run clean:dist && webpack --config config/webpack.prod.js  --progress --profile --bail",
     "clean:dist": "npm run rimraf -- dist",
     "build:aot:prod": "npm run clean:dist && npm run clean:aot && webpack --config config/webpack.prod.js  --progress --profile --bail",
     "clean:aot": "npm run rimraf -- compiled",
     "rimraf": "rimraf",
+
 
     "webdriver-manager": "webdriver-manager",
     "webdriver:start": "npm run webdriver-manager start",
